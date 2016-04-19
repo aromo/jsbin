@@ -1,0 +1,11 @@
+jsbin:
+  image: docker-registry.emergya.com:443/emergya/jsbin
+  ports:
+    - "3000:3000"
+    - "5555:5555"
+  
+pennyworth:
+  image: docker-registry.emergya.com:443/emergya/pennyworth
+  links:
+    - jsbin
+    
